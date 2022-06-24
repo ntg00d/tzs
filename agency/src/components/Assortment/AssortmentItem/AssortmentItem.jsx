@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useMemo} from 'react'
+import React from 'react'
 import styles from './AssortmentItem.module.css'
 import {VscTrash} from 'react-icons/vsc'
 
@@ -24,7 +24,7 @@ const AssortmentItem = ({
         >
             <button onClick={(e) => {
                 e.stopPropagation()
-                categoryHandle(category)
+                categoryHandle()
             }}>{category}</button>
             <h1>{name}</h1>
 

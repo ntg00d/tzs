@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import styles from './Assortment.module.css'
 import AssortmentItem from './AssortmentItem/AssortmentItem'
 
@@ -42,12 +42,13 @@ const Assortment = ({
                         const {name, img, category} = el
                         return <AssortmentItem
                             key={name}
+
                             name={name}
                             img={img}
                             category={category}
+                            categoryHandle={() => categoryHandle(category)}
 
                             currentItem={currentItem}
-                            categoryHandle={categoryHandle}
                             itemHandle={() => itemHandle(name)}
                             deleteItem={() => deleteItem(name)}
                         />
